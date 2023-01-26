@@ -19,9 +19,15 @@ const removeItem = document.querySelectorAll(".fn-remove-me");
 /*1.3 Utiliza el array para crear dinamicamente una lista ul > li de elementos 
 en el div de html con el atributo data-function="printHere".*/
 const cars = ['Mazda 6', 'Ford fiesta', 'Audi A4', 'Toyota corola'];
-const car = document.createElement("ul");
-document.body.appendChild(car);
-
+const dataFunction = document.querySelector('[data-function="printHere"]')
+const ul2 = document.createElement("ul");
+cars.forEach((element) => {
+    const li2 = document.createElement("li");
+    let car = document.createTextNode(element);
+    li2.appendChild(car);
+    ul2.appendChild(li2);
+    dataFunction.appendChild(ul2);
+  });
 
 /*1.4 Crea dinamicamente en el html una lista de div que contenga un elemento 
 h4 para el titulo y otro elemento img para la imagen.*/
