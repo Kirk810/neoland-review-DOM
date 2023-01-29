@@ -65,12 +65,11 @@ remove.addEventListener("click", () =>{
 
 /*1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los 
 elementos de las listas que elimine ese mismo elemento del html.*/
-const all = document.querySelectorAll("li");
-all.forEach( element=> {
-  const remove2 = document.createElement("button");
-  remove2.innerHTML = "Elminar este elemento";
-  document.body.appendChild(remove2);
+const all = document.querySelectorAll("ul");
+const remove2 = document.createElement("button");
+remove2.innerHTML = "Elminar este elemento";
+all.appendChild(remove2);
 
-  remove.addEventListener("click", () =>{
-    img1.removeChild(img1);
-})});
+remove.addEventListener("click", () =>{
+  all.removeChild(all);
+});
