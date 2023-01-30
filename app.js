@@ -39,9 +39,7 @@ const countries2 = [
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
 ];
 const title = document.createElement("div");
-const img1 = document.createElement("ul");
 document.body.appendChild(title);
-title.appendChild(img1);
 countries2.forEach(element => {
   let h4 = document.createElement("h4");
   let img = document.createElement("img");
@@ -52,6 +50,13 @@ countries2.forEach(element => {
   li.appendChild(h4);
   li.appendChild(img);
 })
+
+//1.6: 
+const btn = document.createElement("button");
+  btn.innerHTML = "X";
+  btn.addEventListener("click", () => {
+    title.remove();
+  })
 
 /*1.5 Basandote en el ejercicio anterior. Crea un botón que elimine el último 
 elemento de la lista.*/
@@ -65,11 +70,3 @@ remove.addEventListener("click", () =>{
 
 /*1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los 
 elementos de las listas que elimine ese mismo elemento del html.*/
-const all = document.querySelectorAll("ul");
-const remove2 = document.createElement("button");
-remove2.innerHTML = "Elminar este elemento";
-all.appendChild(remove2);
-
-remove.addEventListener("click", () =>{
-  all.removeChild(all);
-});
